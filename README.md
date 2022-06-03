@@ -1,6 +1,6 @@
 # **0x00. C - Hello, World**
 
-##General
+## General
 
 * Why C programming is awesome
 * Who invented C
