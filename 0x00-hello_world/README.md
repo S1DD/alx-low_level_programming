@@ -1,3 +1,0 @@
-# **C - Hello World**
-
-## General
