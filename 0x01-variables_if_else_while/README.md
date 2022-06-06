@@ -14,7 +14,7 @@
  * The program prints the alphabet in lowercase
  
  ## 3. alphABET
- *  A program that prints the alphabet in lowercase, and then in uppercase
+ *   Prints the alphabet in lowercase, and then in uppercase
  
  ## 4. When I was having that alphabet soup, I never thought that it would pay off
  * Prints the alphabet in lowercase
@@ -22,8 +22,8 @@
  ## 5. Numbers
  * Prints all single digit numbers of base 10 starting from 0
  
- ## 6 . Numberz
- * prints all single digit numbers of base 10 starting from 0
+ ## 6 .Numberz
+ * Prints all single digit numbers of base 10 starting from 0
  
  ## 7. Smile in the mirror
  * Prints the lowercase alphabet in reverse
