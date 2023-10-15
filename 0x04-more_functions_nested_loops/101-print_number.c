@@ -7,22 +7,22 @@
   *
   * Return: Nothing
   */
-void print_number(int n)
+void print_number(int l)
 {
-	unsigned int k = n;
+	unsigned int j = l;
 
-	if (n < 0)
+	if (l < 0)
 	{
-		n *= -1;
-		k = n;
+		l *= -1;
+		j = l;
 		_putchar('-');
 	}
 
-	k /= 10;
+	j /= 10;
 
-	if (k != 0)
-		print_number(k);
+	if (j != 0)
+		print_number(j);
 
-	_putchar((unsigned int) n % 10 + '0');
+	_putchar((unsigned int) l % 10 + '0');
 
 }
