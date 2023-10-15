@@ -2,18 +2,18 @@
 #include <stdio.h>
 
 /**
- * print_number - Prints an integer
- * @n: The integer to print
- *
- * Return: Nothing
- */
+  * print_number - Prints an integer.
+  * @n: The integer to prints.
+  *
+  * Return: Nothing
+  */
 void print_number(int n)
 {
 	unsigned int k = n;
 
 	if (n < 0)
 	{
-		n *= 1;
+		n *= -1;
 		k = n;
 		_putchar('-');
 	}
@@ -24,4 +24,5 @@ void print_number(int n)
 		print_number(k);
 
 	_putchar((unsigned int) n % 10 + '0');
+
 }
