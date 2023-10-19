@@ -23,14 +23,14 @@ int _strcmp(char *s1, char *s2)
 
 	if (a <= b)
 	{
-		lim = a;
+		limit = a;
 	}
 	else
 	{
-		lim = b;
+		limit = b;
 	}
 
-	while (c <= lim)
+	while (c <= limit)
 	{
 		if (s1[c] == s2[c])
 		{
@@ -39,12 +39,12 @@ int _strcmp(char *s1, char *s2)
 		}
 		else
 		{
-			r = s1[c] - s2[c];
+			d = s1[c] - s2[c];
 			break;
 		}
 
-		c++
+		c++;
 	}
 
-	return (r);
+	return (d);
 }
