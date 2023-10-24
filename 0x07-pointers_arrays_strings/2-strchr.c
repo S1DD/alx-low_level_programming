@@ -9,7 +9,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i = 0; j;
+	int i = 0, j;
 
 	while (s[i])
 	{
@@ -21,7 +21,7 @@ char *_strchr(char *s, char c)
 		if (c == s[j])
 		{
 			s += j;
-			return (s)
+			return (s);
 		}
 	}
 
