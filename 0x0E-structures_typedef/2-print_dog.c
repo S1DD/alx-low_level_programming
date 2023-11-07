@@ -5,7 +5,6 @@
 /**
  * print_dog - prints a struct dog
  * @d: Prints a dog
- * 
  * Return: Nothing
  */
 void print_dog(struct dog *d)
@@ -25,4 +24,4 @@ void print_dog(struct dog *d)
 		printf("Owner: (nil)\n");
 	else
 		printf("Owner: %s\n", d->owner);
-}	
+}
