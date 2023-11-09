@@ -47,7 +47,7 @@ int op_mul(int a, int b)
  * @b: The second number
  * Return: The division of two numbers
  */
-int op_div(int a, int b);
+int op_div(int a, int b)
 {
 	return (a / b);
 }
