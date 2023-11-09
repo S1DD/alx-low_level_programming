@@ -9,9 +9,10 @@
  *
  * Return: Always 0
  */
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	int (*operation)(int, int);
+	int n1, n2;
+	char *op;
 
 	if (argc != 4)
 	{
@@ -19,14 +20,25 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	operation = get_op_func(argv[2]);
+	n1 = atoi(argv[1]);
+	op = argv[2];
+	n2 = atoi(argv[3]);
 
-	if (!operation)
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	printf("%d\n", operation(atoi(argv[1]), atoi(argv[3])));
+	if ((*op == '/' && n2 == 0) ||
+	    (*op == '%' && n2 == 0))
+	{
+		printf("Error\n");
+		exit(100);
+
+	}
+
+	printf("%d\n", get_op_func(op)(n1, n2));
+
 	return (0);
 }
