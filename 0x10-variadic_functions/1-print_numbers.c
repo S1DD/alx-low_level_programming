@@ -14,22 +14,22 @@
 void print_numbers(const char *seperator, const unsigned int n, ...)
 {
 	va_list nums;
-	unsigned int i;
+	unsigned int i = 0;
 
-	va_start(nums, n);
-
-	if (seperator == NULL)
-		printf(" ");
-
-	for (i = 0; i < n; i++)
+	if (n > 0)
 	{
-		printf("%d", va_arg(nums, int));
+		va_start(nums, n);
 
-		if (i != (n - 1) && seperator != NULL)
-			printf("%s", seperator);
+		while(i < n)
+		{
+			printf("%d", va_arg(nums, int));
+
+			if (i != n - 1 && seperator != NULL)
+				printf("%s", seperator);
+
+			i++;
+		}
+		va_end(nums);
 	}
-
 	printf("\n");
-
-	va_end(nums);
 }
