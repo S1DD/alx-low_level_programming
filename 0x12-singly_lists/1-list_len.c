@@ -3,7 +3,7 @@
  * Auth: Thabiso Molefe
  */
 
-#include "lists."
+#include "lists.h"
 
 /**
  * list_len - Finds the number of elements in a list_t list
