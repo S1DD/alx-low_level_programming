@@ -1,5 +1,12 @@
+/*
+ * File: 0-print_list.c
+ * Auth: Thabiso Molefe
+ */
+
 #include "lists.h"
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
  * print_list - Prints all the elements of a list_t list.
  * @h: The list_t list.
