@@ -10,7 +10,7 @@
  * @next: points to the next node
  *
  * Description:singly linked list node structure
- * 		for the project
+ * for the project
  */
 
 typedef struct list_s
