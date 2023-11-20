@@ -1,8 +1,3 @@
-/*
- * File: 0-print_list.c
- * Auth: Thabiso Molefe
- */
-
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
