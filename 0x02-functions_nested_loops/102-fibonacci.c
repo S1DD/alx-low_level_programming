@@ -12,20 +12,20 @@ int main(void)
 	unsigned long fib1 = 1, fib2 = 1, sum;
 
 	printf("%lu", fib1);
-	
+
 	for (count = 1; count < 50; count++)
 	{
 		sum = fib1 + fib2;
 
 		if (sum != 1)
 			printf(", ");
-		
+
 		printf("%lu", sum);
-		
+
 		fib1 = fib2;
 		fib2 = sum;
 	}
 	printf("\n");
 
-	return 0;
+	return (0);
 }
