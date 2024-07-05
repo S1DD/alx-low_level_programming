@@ -7,22 +7,18 @@
   *
   * Return: Nothing
   */
-void print_number(int l)
+void print_number(int n)
 {
-	unsigned int j = l;
+	unsigned int num = n;
 
-	if (l < 0)
+	if (n < 0)
 	{
-		l *= -1;
-		j = l;
 		_putchar('-');
+		num = -num;
 	}
 
-	j /= 10;
+	if ((num / 10) > 0)
+		print_number(num / 10);
 
-	if (j != 0)
-		print_number(j);
-
-	_putchar((unsigned int) l % 10 + '0');
-
+	_putchar((num % 10) + '0');
 }
