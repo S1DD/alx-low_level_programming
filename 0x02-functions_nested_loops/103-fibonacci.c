@@ -10,6 +10,7 @@ int main(void)
 {
 	unsigned long first = 0, second = 1, sum;
 	float total_sum = 0.0;
+
 	while (1)
 	{
 		sum = first + second;
