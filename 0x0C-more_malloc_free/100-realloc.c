@@ -3,46 +3,54 @@
 #include <stdio.h>
 
 /**
+ * _realloc - Reallocates a memory block using malloc and free.
+ * @ptr: A pointer to the memory previously allocated.
+ * @old_size: The size in bytes of the allocated space for ptr.
+ * @new_size: The size in bytes for the new memory block.
  *
- * _realloc: ...
- * @ptr: ...
- * @old_size: ...
- * @new_size: ...
- *
- * Return: ...
+ * Return: If new_size == old_size - ptr.
+ *         If new_size == 0 and ptr is not NULL - NULL.
+ *         Otherwise - a pointer to the reallocated memory block.
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *nptr;
-	unsigned int i;
+	void *mem;
+	char *ptr_cpy, *filler;
+	unsigned int idx;
 
 	if (new_size == old_size)
+	{
 		return (ptr);
-
+	}
 	if (ptr == NULL)
 	{
-		nptr = malloc(new_size);
+		mem = malloc(new_size);
 
-		if (nptr == NULL)
+		if (mem == NULL)
 			return (NULL);
 
-		return (nptr);
+		return (mem);
 	}
-	else
+
+	if (new_size == 0 && ptr != NULL)
 	{
-		if (new_size == 0)
-		{
-			free(ptr);
-			return (NULL);
-		}
+		free(ptr);
+		return (NULL);
 	}
 
-		for (i = 0; i < old_size && i < new_size; i++)
-		{
-			nptr[i] = ((char *) ptr)[i];
-		}
+	ptr_cpy = ptr;
+	mem = malloc(sizeof(*ptr_cpy) * new_size);
 
+	if (mem == NULL)
+	{
 		free(ptr);
-		return (nptr);
+		return (NULL);
+	}
+
+	filler = mem;
+
+	for (idx = 0; idx < old_size && index < new_size; idx++)
+		filler[idx] = *ptr_cpy++;
+	free(ptr);
+	return (mem);
 }
-			
