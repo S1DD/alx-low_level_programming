@@ -1,8 +1,9 @@
+#include <stdlib.h>
 #include "lists.h"
 
 /**
  * free_list - Frees a list_t list.
- * @head: A pointer to the list_t list
+ * @head: head of the linked list
  * Return: No return
  */
 
