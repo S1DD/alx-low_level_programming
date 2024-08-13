@@ -1,13 +1,14 @@
 #include "main.h"
 
-/**_strlen - counts the characters in a string
- *
+/**
+ * _strlen - counts the characters in a string
  * @str: The string to be processed
  * Return: length of a string
  */
 int _strlen(char *str)
 {
 	int len = 0;
+
 	while (str[len] != '\0')
 		len++;
 	return (len);
@@ -31,7 +32,7 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	fd = open(filename, O_WRONLY | O_APPEND);
 	if (fd == -1)
-		return(-1);
+		return (-1);
 	if (text_content != NULL)
 	{
 		rwr = write(fd, text_content, _strlen(text_content));
