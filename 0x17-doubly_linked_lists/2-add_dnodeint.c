@@ -15,15 +15,15 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	newEl = malloc(sizeof(dlistint_t));
 
 	if (newEl == NULL)
-		return (NULL)
+		return (NULL);
 
-	newEl->data = n;
+	newEl->n = n;
 	newEl->prev = NULL;
 	newEl->next = *head;
 
 	if (*head != NULL)
 		(*head)->prev = newEl;
-	head = *newEl;
+	*head = newEl;
 
 	return (newEl);
 }
